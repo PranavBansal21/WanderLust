@@ -23,7 +23,7 @@ module.exports.PostNew = async (req, res, next) => {
   newlisting.image = { url, filename };
   await newlisting.save();
   req.flash("success", "New Listing Created");
-  res.redirect("http://localhost:8080/listings");
+  res.redirect("/listings");
 };
 
 module.exports.showListing = async (req, res) => {
